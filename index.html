@@ -25,14 +25,14 @@
  
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(function(position) {
-                show_it(position.coords.latitude,position.coords.longitude);
+                show_it(position.coords.latitude, position.coords.longitude);
             },
-            函数（错误）{
-                getElement('geo_loc').innerHTML = err.code + "|" + 错误消息；
+            function(err) {
+                getElement('geo_loc').innerHTML = err.code + "|" + err.message;
             });
-        } 别的 {
+        } else {
             getElement('geo_loc').innerHTML = ".";
         }
-    </脚本>
-</正文>
+    </script>
+</body>
 </html>
